@@ -1,0 +1,769 @@
+/* =========================================
+Basic setup
+========================================= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #413d4b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:focus, input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,ol {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin-bottom: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0;
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.57;
+  margin-bottom: 0;
+}
+/* =========================================
+Basic setup
+========================================= */
+
+/* =========================================
+Reusable components
+========================================= */
+.section-padding {
+  padding: 70px 0;
+}
+
+.custom-btn {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #00e0d0;
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #00e0d0;
+  border-radius: 3px;
+  transition: all 300ms ease;
+}
+
+.custom-btn:hover {
+  background-color: #00e0d0;
+  color: #413d4b;
+}
+
+.section-title {
+  margin-bottom: 5px;
+}
+
+.section-dsc {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f2d35;
+  position: relative;
+}
+
+.section-dsc::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgba(65, 61, 75, 0.3);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================================
+Reusable components
+========================================= */
+
+/* =========================================
+Navigation
+========================================= */
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-brand img {
+  height: 50px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 13px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: color 300ms ease;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #00e0d0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #00e0d0;
+}
+
+/* ===== Sticky Nav ===== */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(rgba(49, 29, 94, 1), rgba(9, 5, 47, 1));
+  box-shadow: 0 0px 2px #ffffff;
+  -webkit-animation: sticky-menu 500ms ease;
+  animation: sticky-menu 500ms ease;
+  z-index: 999;
+}
+
+@-webkit-keyframes sticky-menu {
+  from {
+    top: -80;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes sticky-menu {
+  from {
+    top: -80px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* ===== Sticky Nav ===== */
+
+/* =========================================
+Navigation
+========================================= */
+
+/* =========================================
+Home section
+========================================= */
+.home-content {
+  padding: 220px 0 205px;
+}
+.slider-1 {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/home-bg-01.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.slider-2 {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/home-bg-02.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.slider-3 {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/home-bg-03.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.slider-4 {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/home-bg-04.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/*========== Slick slider ==========*/
+.home-slider .slick-dots {
+  bottom: 60px;
+}
+
+.home-slider .slick-dots li.slick-active button::before {
+	opacity: 0;
+	color: rgba(0, 0, 0, 0);
+}
+
+.home-slider .slick-dots li button::before {
+	opacity: 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+.home-slider .slick-dots li {
+	width: 10px;
+	height: 10px;
+	margin: 0 10px;
+}
+
+.home-slider .slick-dots li button {
+	width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0px;
+	color: transparent;
+	border: 1px solid #c2c2c2;
+  background: transparent;
+  transition: all 300ms ease;
+}
+
+.home-slider .slick-dots li button:focus, .slick-dots li button:hover {
+  background: #00e0d0;
+  border: 1px solid #00e0d0;
+}
+
+.home-slider .slick-dots li.slick-active button {
+  background: #00e0d0;
+  border: 1px solid #00e0d0;
+}
+/*========== Slick slider ==========*/
+
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background: #00e0d0;
+}
+
+#home p {
+  max-width: 670px;
+  margin: 0 auto 45px;
+  line-height: 1.7;
+}
+
+.btn-home:hover {
+  color: #ffffff;
+}
+/* =========================================
+Home section
+========================================= */
+/* =========================================
+Story section
+========================================= */
+#story h2 {
+  margin-bottom: 20px;
+}
+
+#story p:first-of-type {
+  margin-bottom: 15px;
+}
+
+#story p:last-of-type {
+  margin-bottom: 25px;
+}
+/* =========================================
+Story section
+========================================= */
+
+/* =========================================
+Story video section
+========================================= */
+.story-video {
+  padding: 200px 0 195px;
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/story-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.story-video i {
+  font-size: 100px;
+  margin-bottom: 27px;
+  color: #ffffff;
+}
+/* =========================================
+Story video section
+========================================= */
+
+/* =========================================
+Expertise section
+========================================= */
+.expertise-titlebox {
+  margin-bottom: 95px;
+}
+
+.expertise-contentbox {
+  margin-bottom: 75px;
+}
+
+.seo,
+.game,
+.love {
+  margin-bottom: 30px;
+}
+
+.expertise-contentbox img {
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.expertise-contentbox h3 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.expertise-contentbox p {
+  color: rgba(51, 51, 51, 0.75);
+}
+/* =========================================
+Expertise section
+========================================= */
+
+/* =========================================
+Team section
+========================================= */
+#team {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/team-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.team-titlebox {
+  margin-bottom: 65px;
+}
+
+#team .section-dsc {
+  color: #f9f9f9;
+}
+
+#team .section-dsc::after {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.team-contentbox {
+  max-width: 220px;
+  margin: 0 auto 65px;
+}
+
+.team-contentbox img {
+  transition: all 500ms ease;
+}
+
+.team-contentbox img:hover {
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+.team-content {
+  padding: 15px 0;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  border-top: none;
+  text-transform: uppercase;
+}
+
+.team-contentbox small {
+  display: inline-block;
+  font-size: 13px;
+  color: rgba(250, 250, 250, 0.7);
+}
+
+#team p {
+  margin-bottom: 25px;
+}
+
+.btn-team:hover {
+  color: #ffffff;
+}
+/* =========================================
+Team section
+========================================= */
+
+/* =========================================
+Works section
+========================================= */
+.filter-btns button {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  margin: 0 5px;
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 400;
+  color: #413d4b;
+  font-size: 14px;
+}
+
+.filter-btns {
+  margin-bottom: 50px;
+}
+
+#works .section-dsc {
+  margin-bottom: 50px;
+}
+
+.works-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.works-filter div {
+  width: 16.66666666666667%;
+}
+/* =========================================
+Works section
+========================================= */
+
+/* =========================================
+Testimonial section
+========================================= */
+#testimonial {
+  padding: 100px 0 105px;
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/testimonial-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+#testimonial blockquote {
+  max-width: 740px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.quotation {
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+#testimonial cite {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+}
+
+/*========== Slick slider ==========*/
+.testimonial-slider .slick-dots {
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-slider .slick-dots li.slick-active button::before {
+	opacity: 1;
+	color: #00e0d0;
+}
+
+.testimonial-slider .slick-dots li button::before {
+	opacity: 0;
+  color: rgba(0, 0, 0, 0);
+  font-size: 10px;
+  line-height: 22px;
+}
+
+.testimonial-slider .slick-dots li {
+	width: 20px;
+	height: 20px;
+	margin: 0 10px;
+}
+
+.testimonial-slider .slick-dots li button {
+	width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0px;
+	color: transparent;
+  background: #ffffff;
+  transition: all 300ms ease;
+}
+
+.testimonial-slider .slick-dots li button:focus, .slick-dots li button:hover {
+  border: none;
+}
+/*========== Slick slider ==========*/
+/* =========================================
+Testimonial section
+========================================= */
+
+/* =========================================
+Contact section
+========================================= */
+.contact-form h2 {
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(65, 61, 75, 0.5);
+  opacity: 1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #00e0d0;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.btn-contact {
+  background: #ffffff;
+  padding: 7px 32px;
+}
+
+.client-title h2 {
+  margin-bottom: 30px;
+}
+
+.client-logo {
+  margin-bottom: 50px;
+}
+/* =========================================
+Contact section
+========================================= */
+
+/* =========================================
+Footer section
+========================================= */
+footer {
+  background: linear-gradient(to right, rgba(9, 5, 47, 0.85),rgba(49, 29, 94, 0.85)), url(../img/footer-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+footer h3 {
+  font-size: 15px;
+}
+
+.footer-logo {
+  margin-top: -18px;
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-logo + p {
+  max-width: 280px;
+}
+
+.newsletter-title {
+  margin-bottom: 35px;
+}
+
+.studio-title {
+  margin-bottom: 30px;
+}
+
+footer p {
+  line-height: 1.85;
+}
+
+.location i,
+.telephone i {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.location i {
+  margin-right: 15px;
+}
+
+.telephone i {
+  margin-right: 10px;
+}
+
+.location,
+.telephone {
+  display: flex;
+}
+
+.location {
+  margin-bottom: 10px;
+}
+
+.location p {
+  max-width: 230px;
+}
+
+.newsletter {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.newsletter input {
+  display: block;
+  font-size: 14px;
+  padding: 10px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  margin-right: 10px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.newsletter button {
+  display: block;
+  font-size: 25px;
+  padding: 5px 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000000;
+}
+
+.newsletter input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.newsletter input:focus {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.newsletter button:focus {
+  background: rgba(255, 255, 255, 1);
+}
+
+.social-icons i {
+  font-size: 14px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 10px;
+  transition: all 500ms ease;
+  color: #ffffff;
+}
+
+.social-icons i:hover {
+  transform: rotate(360deg);
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-nav a {
+  display: inline-block;
+  font-weight: 400;
+  color: #ffffff;
+  margin-right: 35px;
+}
+
+.copyright p {
+  text-align: right;
+  font-weight: 400;
+  margin-top: -3px;
+}
+
+footer .row:first-of-type {
+  margin-bottom: 60px;
+}
+/* =========================================
+Footer section
+========================================= */
+
+/* =========================================
+Scroll Up
+========================================= */
+.scroll-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(9, 5, 47, 1),rgba(49, 29, 94, 1));
+  text-align: center;
+  line-height: 40px;
+  z-index: 99;
+}
+
+.scroll-up .fa-chevron-up {
+  color: #ffffff;
+  font-size: 16px;
+}
+/* =========================================
+Scroll Up
+========================================= */
+
